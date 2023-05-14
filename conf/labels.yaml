@@ -1,0 +1,71 @@
+entities:
+  O: "O"
+  SET: "SET"
+  TIME: "TIME"
+  DATE: "DATE"
+  MISC: "MISC"
+  MONEY: "MNY"
+  PERSON: "PER"
+  NUMBER: "NUM"
+  ORDINAL: "ORD"
+  LOCATION: "LOC"
+  DURATION: "DUR"
+  ORGANIZATION: "ORG"
+  PERCENT: "PRC"
+
+  #GIDS Datataset adds
+  # URL: "URL"
+  # CITY: "CITY"
+  # EMAIL: "EML"
+  # TITLE: "TTL"
+  # RELIGION: "REL"
+  # IDEOLOGY: "IDE"
+  # NATIONALITY: "NAT"
+  # CAUSE_OF_DEATH: "COD"
+  # CRIMINAL_CHARGE: "CCH"
+  # COUNTRY: "CNT"
+  # STATE_OR_PROVINCE: "SOR"
+
+relations:
+  - no_relation
+  - per:employee_of
+  - per:cities_of_residence
+  - per:children
+  - per:title
+  - per:siblings
+  - per:religion
+  - per:age
+  - per:stateorprovinces_of_residence
+  - per:countries_of_residence
+  - per:spouse
+  - per:origin
+  - per:other_family
+  - per:stateorprovince_of_birth
+  - per:date_of_death
+  - per:alternate_names
+  - per:parents
+  - per:schools_attended
+  - per:cause_of_death
+  - per:city_of_death
+  - per:stateorprovince_of_death
+  - per:country_of_birth
+  - per:date_of_birth
+  - per:city_of_birth
+  - per:charges
+  - per:country_of_death
+  - org:founded_by
+  - org:alternate_names
+  - org:website
+  - org:member_of
+  - org:top_members/employees
+  - org:city_of_headquarters
+  - org:members
+  - org:country_of_headquarters
+  - org:stateorprovince_of_headquarters
+  - org:number_of_employees/members
+  - org:parents
+  - org:subsidiaries
+  - org:political/religious_affiliation
+  - org:dissolved
+  - org:shareholders
+  - org:founded

@@ -1,0 +1,20 @@
+batch_size: 176
+bert_model_string: bert-base-cased
+dataset: TACRED revised
+dataset_path: /data/NLP/tacred/data/preprocessed/
+epochs: 5
+learning_rate: 0.00020088350450893236
+logging_interval: 10
+max_grad_norm: 137.0634432362043
+max_sentence_lenght: 150
+model: model
+no_relation_weight: 0.454
+optimizer: ADAM
+project_name: dp-project-v3
+random_seed: null
+re_hack: true
+relation_weight: 1.92
+scheduler_gamma: 0.88
+scheduler_step_size: 598
+validation_interval: 100
+weight_decay: 0.012

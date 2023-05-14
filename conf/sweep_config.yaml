@@ -1,0 +1,38 @@
+method: bayes
+name: optim-sweep-v2
+program: train_model_v2.ipynb
+early_terminate:
+  type: hyperband
+  min_iter: 12
+metric:
+  goal: minimize
+  name: Valid Loss
+parameters:
+  no_relation_weight:
+    distribution: constant
+    value: 0.454
+  relation_weight:
+    distribution: constant
+    value: 1.92
+  scheduler_step_size:
+    distribution: constant
+    value: 598
+  optimizer:
+    distribution: constant
+    value: ADAM
+  learning_rate:
+    distribution: uniform
+    min: 0.000000787
+    max: 0.000989
+  max_grad_norm:
+    distribution: uniform
+    min: 55
+    max: 185
+  scheduler_gamma:
+    distribution: uniform
+    min: 0.6
+    max: 1.0
+  weight_decay:
+    distribution: uniform
+    min: 0.0082
+    max: 0.12
