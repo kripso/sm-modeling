@@ -94,10 +94,10 @@ def fit(model, optimizer, scheduler, metrics, train_dataset, dev_dataset, test_d
             )
 
             ner_targets = ner_labels.view(-1)
+            active_labels = ner_targets != -100
+
             ner_predictions = torch.argmax(model_out.ner_probs.view(-1, model.num_labels), dim=1)
             re_predictions = torch.argmax(model_out.re_probs, dim=1)
-
-            active_labels = ner_labels.view(-1) != -100
 
             ner_labels = torch.masked_select(ner_targets, active_labels)
             ner_predictions = torch.masked_select(ner_predictions, active_labels)
