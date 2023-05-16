@@ -141,8 +141,11 @@ class JointNERAndREDataset(CustomDataset):
 class JointNERAndREModel(nn.Module):
     config = BertConfig.from_pretrained(CONFIG["bert_model_string"])
 
-    def __init__(self, labels: List[str], relations: List[str], re_class_weights):
+    def __init__(self, labels: List[str] = None, relations: List[str] = None, re_class_weights=None):
         super(JointNERAndREModel, self).__init__()
+        labels = labels if labels is not None else utils.load_labels()
+        relations = relations if relations is not None else utils.load_relations()
+
         self.num_relations = len(relations)
         self.num_labels = len(labels)
         self.relations = relations

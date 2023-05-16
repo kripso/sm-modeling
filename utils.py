@@ -138,6 +138,16 @@ def load_relations():
     return relations_to_ids, ids_to_relations
 
 
+def get_labels():
+    _, ids_to_labels = load_labels()
+    return [item for item in ids_to_labels.values()]
+
+
+def get_relations():
+    _, ids_to_relations = load_relations()
+    return [item for item in ids_to_relations.values()]
+
+
 def string_to_list_1(sentence: str) -> List[str]:
     urls = re.findall(URI_PATTERN, sentence)
     return [
