@@ -143,8 +143,8 @@ class JointNERAndREModel(nn.Module):
 
     def __init__(self, labels: List[str] = None, relations: List[str] = None, re_class_weights=None):
         super(JointNERAndREModel, self).__init__()
-        labels = labels if labels is not None else utils.load_labels()
-        relations = relations if relations is not None else utils.load_relations()
+        labels = labels if labels is not None else utils.get_labels()
+        relations = relations if relations is not None else utils.get_relations()
 
         self.num_relations = len(relations)
         self.num_labels = len(labels)
